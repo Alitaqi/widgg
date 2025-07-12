@@ -2,7 +2,7 @@ import './styles.css';
 import { showWidget } from './widget';
 
 function injectCSS() {
-  const styleHref = 'https://yourdomain.com/assets/styles.css'; // 🔁 Change to your deployed CSS path
+  const styleHref = 'https://widgg.vercel.app/assets/styles.css'; // 🔁 Change to your deployed CSS path
   const link = document.createElement('link');
   link.rel = 'stylesheet';
   link.type = 'text/css';
