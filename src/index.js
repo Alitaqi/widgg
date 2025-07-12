@@ -3,7 +3,7 @@ import { showWidget } from './widget';
 
 function createFloatingButton() {
   const btn = document.createElement('button');
-  btn.innerText = '📅';
+  btn.innerText = '✅';
   btn.title = 'Open Reservation';
   btn.id = 'my-widget-fab';
   btn.onclick = showWidget;

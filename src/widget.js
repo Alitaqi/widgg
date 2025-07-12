@@ -1,26 +1,21 @@
 export function showWidget() {
-    if (document.getElementById('widget-popup')) return;
+    // Avoid multiple popups
+    if (document.getElementById('widget-modal')) return;
   
-    const popup = document.createElement('div');
-    popup.id = 'widget-popup';
-    popup.innerHTML = `
-      <div style="
-        position: fixed;
-        bottom: 90px;
-        right: 20px;
-        width: 300px;
-        background: white;
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-        z-index: 9999;
-      ">
+    // Create outer modal wrapper
+    const modal = document.createElement('div');
+    modal.id = 'widget-modal';
+  
+    // Modal content (backdrop + box)
+    modal.innerHTML = `
+      <div class="widget-backdrop" onclick="document.getElementById('widget-modal').remove()"></div>
+      <div class="widget-box">
         <h4>Hello Widget 👋</h4>
         <p>This can be your step 1</p>
-        <button onclick="document.getElementById('widget-popup').remove()">Close</button>
+        <button onclick="document.getElementById('widget-modal').remove()">Close</button>
       </div>
     `;
   
-    document.body.appendChild(popup);
+    document.body.appendChild(modal);
   }
   
