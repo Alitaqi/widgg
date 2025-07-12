@@ -9,5 +9,11 @@ export default defineConfig({
       fileName: 'my-widget',
       formats: ['iife'],
     },
+    outDir: 'dist',
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name].[ext]', // for CSS/images
+      }
+    }
   },
 });
