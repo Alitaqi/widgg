@@ -1,4 +1,6 @@
+
+
 import './styles.css';
 import { showWidget } from './widget';
 
-showWidget();
+window.showMyWidget = showWidget; // expose it globally
